@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Snippets>
+  <Snippet Name="From (Ask, Bid) to averaged (Mid)" Type="Data">#BEGIN: From (Ask, Bid) to averaged (Mid)
+from System.Collections.Generic import *
+lastMid = List[float]()
+def Single():
+    global lastMid
+    if (lastMid.Count >= 20):
+      lastMid.RemoveAt(1)
+    mid = (i["F_Ask"] + i["F_Bid"]) / 2
+    lastMid.Add(mid)
+    o["AvgMid"] = 0
+    for c, current in enumerate(lastMid):
+      o["AvgMid"] = o["AvgMid"] + current
+    if (c > 0):
+      o["AvgMid"] = o["AvgMid"] / (c + 1)
+#END</Snippet>
+  <Snippet Name="From (Ask, Bid) to (Mid)"
+           Type="Data">#BEGIN: From (Ask, Bid) to (Mid)
+def Single():
+    o["Mid"] = (i["F_Ask"] + i["F_Bid"]) / 2
+#END</Snippet>
+  <!-- Snippet Name="For DataItem" Type="DataItem"></Snippet -->
+  <Snippet Name="From (Index|Last, Currency|Ask) to Index|Last for this currency" Type="HistoryData">#BEGIN: From (Ask, Bid) to averaged (Mid)
+def MultiHistory():
+  val = HistoryData(i.Guid, "Nikkei EUR", i.Time)
+  for c, current in enumerate(i["EURJPY="]):
+    item = HistoryDataItem(i.Guid, current.Time)
+    item["Last"] = i[".N225"][current.Time]["F_Last"] / current["F_Ask"]
+    val.Add(item)
+  return val
+#END</Snippet>
+</Snippets>

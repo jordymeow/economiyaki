@@ -1,0 +1,446 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9284F359-8354-42FF-B77F-A62B6B6519D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Finance.Framework.Core</RootNamespace>
+    <AssemblyName>Finance.Framework.Core</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <ApplicationIcon>yen-coins.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\#Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Fireball.CodeEditor, Version=2.0.0.48, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\#Ext\Fireball.CodeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.Core, Version=2.0.0.48, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\#Ext\Fireball.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.SyntaxDocument, Version=2.0.0.48, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\#Ext\Fireball.SyntaxDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.Win32, Version=2.0.0.48, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\#Ext\Fireball.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball.Windows.Forms, Version=2.0.0.48, Culture=neutral, PublicKeyToken=f84d0e3f884fb1e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\#Ext\Fireball.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="IronMath, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\#Ext\IronMath.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\#Ext\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.4.31904, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\#Ext\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modules\Data\DataItemSettings.cs" />
+    <Compile Include="Modules\Data\FrmSetTimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Data\FrmSetTimer.Designer.cs">
+      <DependentUpon>FrmSetTimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Excel\FrmLinker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Excel\FrmLinker.Designer.cs">
+      <DependentUpon>FrmLinker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Excel\MarketSpreadsheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Excel\MarketSpreadsheet.Designer.cs">
+      <DependentUpon>MarketSpreadsheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FrmMessagesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\FrmMessagesDetails.Designer.cs">
+      <DependentUpon>FrmMessagesDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Python\DynamicStream.cs" />
+    <Compile Include="Modules\Grid\FrmAlertAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Grid\FrmAlertAdd.Designer.cs">
+      <DependentUpon>FrmAlertAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Data\FrmDataItemSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Data\FrmDataItemSettings.Designer.cs">
+      <DependentUpon>FrmDataItemSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GfxContentType.cs" />
+    <Compile Include="Modules\IGfxModule.cs" />
+    <Compile Include="GfxMessage.cs" />
+    <Compile Include="Modules\Data\FadingThread.cs" />
+    <Compile Include="Modules\MarketCtrlHelper.cs" />
+    <Compile Include="Modules\Data\MarketDataItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Data\MarketDataItem.Designer.cs">
+      <DependentUpon>MarketDataItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Grid\MarketGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Grid\MarketGrid.Designer.cs">
+      <DependentUpon>MarketGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Export\MarketExport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Export\MarketExport.Designer.cs">
+      <DependentUpon>MarketExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Data\MarketData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Data\MarketData.Designer.cs">
+      <DependentUpon>MarketData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Logger\MarketLogger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Logger\MarketLogger.Designer.cs">
+      <DependentUpon>MarketLogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Graph\MarketGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Graph\MarketGraph.Designer.cs">
+      <DependentUpon>MarketGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Python\FrmConstants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Python\FrmConstants.Designer.cs">
+      <DependentUpon>FrmConstants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Excel\FrmVarModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Excel\FrmVarModify.Designer.cs">
+      <DependentUpon>FrmVarModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Python\FrmVarModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Python\FrmVarModify.Designer.cs">
+      <DependentUpon>FrmVarModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Python\MarketPython.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Python\MarketPython.Designer.cs">
+      <DependentUpon>MarketPython.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Python\PythonExecuter.cs" />
+    <Compile Include="MyakiPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyakiPanel.Designer.cs">
+      <DependentUpon>MyakiPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerializableDictionary.cs" />
+    <Compile Include="Serialization\MWF_Base.cs" />
+    <Compile Include="Serialization\MWF_Data.cs" />
+    <Compile Include="Serialization\MWF_Export.cs" />
+    <Compile Include="Serialization\MWF_File.cs" />
+    <Compile Include="Serialization\MWF_Graph.cs" />
+    <Compile Include="Serialization\MWF_Grid.cs" />
+    <Compile Include="Serialization\MWF_Logger.cs" />
+    <Compile Include="Serialization\MWF_Python.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Modules\Data\FrmSetTimer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSetTimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\FrmMessagesDetails.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMessagesDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Grid\FrmAlertAdd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAlertAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Data\FrmDataItemSettings.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDataItemSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Data\MarketDataItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MarketDataItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Grid\MarketGrid.resx">
+      <DependentUpon>MarketGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Export\MarketExport.resx">
+      <DependentUpon>MarketExport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Data\MarketData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MarketData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Logger\MarketLogger.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MarketLogger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Graph\MarketGraph.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MarketGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Python\FrmConstants.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmConstants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Excel\FrmVarModify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmVarModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Python\MarketPython.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MarketPython.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Bloomberg\Bloomberg.csproj">
+      <Project>{21E3C8D1-D382-40A5-8522-DB922680B1B0}</Project>
+      <Name>Bloomberg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Contracts\Types.csproj">
+      <Project>{EE1EAC80-6E32-4707-BC88-DF0EEAE6F2DB}</Project>
+      <Name>Types</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Network\Network.csproj">
+      <Project>{6A0F1D91-3F98-497F-8540-928DD968B8C8}</Project>
+      <Name>Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Reuters\Reuters.csproj">
+      <Project>{115DC54E-4C0A-4F1E-85D0-3EEE439A92F5}</Project>
+      <Name>Reuters</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\application_xp_terminal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\chart_curve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\server_connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IronPython.syn">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\email.png" />
+    <None Include="Resources\link_add.png" />
+    <None Include="Resources\link_break.png" />
+    <None Include="Resources\arrow_down.png" />
+    <None Include="Resources\arrow_up.png" />
+    <None Include="Resources\bug.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\link.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\cross_hilight.png" />
+    <None Include="Resources\application.png" />
+    <None Include="Resources\magifier_zoom_out.png" />
+    <None Include="Resources\magnifier_zoom_in.png" />
+    <None Include="Resources\magifier_zoom_out_hilight.png" />
+    <None Include="Resources\magnifier_zoom_in_hilight.png" />
+    <None Include="Resources\chart_line.png" />
+    <None Include="Resources\comments.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\bullet_wrench.png" />
+    <None Include="Resources\bullet_wrench_highlight.png" />
+    <EmbeddedResource Include="Modules\Excel\FrmLinker.resx">
+      <DependentUpon>FrmLinker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Excel\MarketSpreadsheet.resx">
+      <DependentUpon>MarketSpreadsheet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Python\FrmVarModify.resx">
+      <DependentUpon>FrmVarModify.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\plugin.png" />
+    <None Include="Resources\brick.png" />
+    <None Include="Resources\bricks.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\car.png" />
+    <None Include="Resources\clock_add.png" />
+    <None Include="Resources\clock_delete.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\RelationshipsHS.png" />
+    <None Include="Resources\saveHS.png" />
+    <None Include="Resources\openHS.png" />
+    <None Include="Resources\DataContainer_MoveNextHS.png" />
+    <None Include="Resources\DataContainer_MoveLastHS.png" />
+    <None Include="Resources\DataContainer_MovePreviousHS.png" />
+    <None Include="Resources\DataContainer_MoveFirsHS.png" />
+    <None Include="Resources\DeleteHS.png" />
+    <None Include="Resources\ExpirationHS.png" />
+    <None Include="Resources\PropertiesHS.png" />
+    <None Include="Resources\Throbber.gif" />
+    <EmbeddedResource Include="Resources\ShowGridlinesHS.png" />
+    <EmbeddedResource Include="Resources\SaveFormDesignHS.png" />
+    <None Include="Resources\control_equalizer_blue.png" />
+    <None Include="Resources\bomb.png" />
+    <None Include="Resources\accept.png" />
+    <None Include="Resources\VSObject_Type_Friend.bmp" />
+    <None Include="Resources\VSProject_control.bmp" />
+    <None Include="Resources\VSProject_database.bmp" />
+    <None Include="Resources\color_swatch.png" />
+    <None Include="Resources\page_edit.png" />
+    <EmbeddedResource Include="Resources\layout_link.png" />
+    <EmbeddedResource Include="Resources\excel.png" />
+    <EmbeddedResource Include="Resources\brick_edit.png" />
+    <EmbeddedResource Include="Resources\disconnect.png" />
+    <EmbeddedResource Include="Resources\database_refresh.png" />
+    <None Include="Resources\PythonSyntax.txt" />
+    <None Include="Resources\error.png" />
+    <Content Include="Snippets.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\page_code.png" />
+    <None Include="Resources\page_white_code.png" />
+    <Content Include="Resources\resultset_next.png" />
+    <Content Include="Resources\table.png" />
+    <None Include="Resources\table_row_insert.png" />
+    <None Include="Resources\table_row_delete.png" />
+    <None Include="Resources\table_save.png" />
+    <Content Include="Resources\world.png" />
+    <Content Include="Resources\world_add.png" />
+    <Content Include="yen-coins.ico" />
+    <None Include="Resources\wrench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{00000205-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxOWC11">
+      <Guid>{0002E558-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSComctlLib">
+      <Guid>{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSDATASRC">
+      <Guid>{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="OWC11">
+      <Guid>{0002E558-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
