@@ -1,0 +1,2 @@
+# economiyaki
+Financial library that combines Winforms elements &amp; market access mods to simplify / unify data retrieval from Bloomberg or Reuters. A mash-up tool is included with which the user is able to mix &amp; link these elements between each other (called Jumbler). The whole system is also scriptable with IronPython. Note: Bloomberg or/and Reuters is needed to really use this application.
